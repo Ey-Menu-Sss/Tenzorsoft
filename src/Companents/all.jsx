@@ -7,18 +7,18 @@ const CHAT_ID = "-1003257673634";
 
 const faqs = [
     {
-        question: "Как пройти регистрацию?",
-        answer: "Перейти к регистрации",
+        question: "Services",
+        answer: "Home",
         link: "/register",
     },
     {
-        question: "Где посмотреть тарифы?",
-        answer: "Открыть тарифы",
+        question: "Template ",
+        answer: "Software development",
         link: "/pricing",
     },
     {
-        question: "Как связаться с поддержкой?",
-        answer: "Связаться с поддержкой",
+        question: "Contact",
+        answer: "Tashkent city Mirabad district st. Magtymguly",
         link: "/contact",
     },
 ];
@@ -229,7 +229,7 @@ function all() {
                             <div className=" space-y-[20px]">
                                 <div className="space-y-[12px]">
                                     <h1 className="font-medium text-center text-4xl">Why Choose Us?</h1>
-                                    <p className="text-lg">With over 15 years of experience in the IT industry, we've established <br className="hidden md:block"/> ourselves as a trusted partner for businesses seeking innovative solutions. <br className="hidden md:block" /> Our team of experts brings together diverse skills and perspectives to tackle <br className="hidden md:block" /> even the most complex challenges... </p>
+                                    <p className="text-lg">With over 15 years of experience in the IT industry, we've established <br className="hidden md:block" /> ourselves as a trusted partner for businesses seeking innovative solutions. <br className="hidden md:block" /> Our team of experts brings together diverse skills and perspectives to tackle <br className="hidden md:block" /> even the most complex challenges... </p>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[76px] justify-items-center md:justify-items-start">
@@ -267,7 +267,7 @@ function all() {
                             </div>
                         </div>
                     </div>
-                </section> 
+                </section>
 
                 <section ref={servicesRef} id="Services" className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-[70px] my-[20px] ">
                     <div className="space-y-4 items-center justify-center flex flex-col text-center">
@@ -275,17 +275,17 @@ function all() {
                             <i className="bi bi-buildings text-2xl"></i>
                             <h1 className="text-2xl">Services</h1>
                         </button>
-                        <p className="text-xl">Tenzor Soft LLC is a leading software developer in Uzbekistan, operating <br />in the IT services market since 2008. For over 15 years,</p>
+                        <p className="text-[16px] md:text-xl">At FixFlow, we take pride in delivering top-quality plumbing services <br className="hidden md:block" /> designed to keep your home or business running.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         {cardsData.map((card, index) => (
                             <div key={index} className="relative flex flex-col h-[160px] w-[345px] md:h-[285px] p-[16px] md:p-6 rounded-2xl border border-white shadow-xl shadow-gray-200   space-y-1 hover:bg-[#F3F8FF]">
-                               <div className="flex gap-4 items-center">
-                                 <span className="flex items-center shrink-0 justify-center w-[60px] h-[60px] rounded-full bg-[#0349A7]">
-                                    <i className={`bi bi-${card.icon} text-white text-[32px]`}></i>
-                                </span>
-                                <div className=" font-semibold text-[20px]  text-[#1B2845] block lg:hidden">{card.description}</div>
-                               </div>
+                                <div className="flex gap-4 items-center">
+                                    <span className="flex items-center shrink-0 justify-center w-[60px] h-[60px] rounded-full bg-[#0349A7]">
+                                        <i className={`bi bi-${card.icon} text-white text-[32px]`}></i>
+                                    </span>
+                                    <div className=" font-semibold text-[20px]  text-[#1B2845] block lg:hidden">{card.description}</div>
+                                </div>
                                 <h1 className="mt-2 font-semibold text-2xl text-[#1B2845] hidden lg:block">{card.description}</h1>
                                 <div className="h-px w-full bg-gradient-to-r from-transparent via-white/90 to-transparent"></div>
                                 <p className=" text-[16px] md:text-lg  text-[#8D8D8D]"> {card.cardText} </p>
@@ -294,15 +294,15 @@ function all() {
                     </div>
                 </section>
 
-                {/* <section ref={portfolioRef} id="Porfolio" className=" bg-gradient-to-b from-[#0348A408] to-white   flex items-center">
-                    <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[70px] space-y-4">
-                        <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[55px] text-center justify-center items-center">
+                <section ref={portfolioRef} id="Porfolio" className=" bg-gradient-to-b from-[#0348A408] to-white   flex items-center">
+                    <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[20px] md:my-[70px] space-y-2 md:space-y-4 px-[20px] md:px-0">
+                        <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                             <i className="bi bi-buildings text-2xl"></i>
                             <h1 className="text-2xl">Portfolio</h1>
                         </button>
-                        <h1 className="font-semibold text-4xl  text-center">Explore Our Most <br /> Remarkable Projects.</h1>
-                        <p className=" text-center text-xl">We craft customized solutions that empower both startups and <br /> established brands, driving success and delivering real impact.</p>
-                        <div className="grid grid-cols-2 gap-5">
+                        <h1 className="font-semibold text-[24px] md:text-4xl  text-center">Explore Our Most <br /> Remarkable Projects.</h1>
+                        <p className=" text-center text-[16px] md:text-xl">We craft customized solutions that <br className="block lg:hidden" /> empower both startups and <br className="hidden md:block" /> established <br className="block lg:hidden" /> brands, driving success and delivering real <br className="block lg:hidden" /> impact.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                             <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden">
                                 <div className="overflow-hidden rounded-xl">
@@ -312,13 +312,14 @@ function all() {
                                     <div className="flex flex-col items-start space-y-2">
                                         <h1 className="font-bold text-2xl">LogistX</h1>
                                         <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br />
+                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
                                             haydovchilarimiz bilan tanishing
                                         </p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
                             </div>
+
                             <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden">
                                 <div className="overflow-hidden rounded-xl">
                                     <img src="/image/LogistX.png" className="rounded-xl transition-transform duration-500 group-hover:scale-110" />
@@ -327,14 +328,15 @@ function all() {
                                     <div className="flex flex-col items-start space-y-2">
                                         <h1 className="font-bold text-2xl">LogistX</h1>
                                         <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br />
+                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
                                             haydovchilarimiz bilan tanishing
                                         </p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
                             </div>
-                            <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden">
+
+                            <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden hidden lg:block">
                                 <div className="overflow-hidden rounded-xl">
                                     <img src="/image/LogistX.png" className="rounded-xl transition-transform duration-500 group-hover:scale-110" />
                                 </div>
@@ -342,14 +344,15 @@ function all() {
                                     <div className="flex flex-col items-start space-y-2">
                                         <h1 className="font-bold text-2xl">LogistX</h1>
                                         <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br />
+                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
                                             haydovchilarimiz bilan tanishing
                                         </p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
                             </div>
-                            <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden">
+
+                            <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden hidden lg:block">
                                 <div className="overflow-hidden rounded-xl">
                                     <img src="/image/LogistX.png" className="rounded-xl transition-transform duration-500 group-hover:scale-110" />
                                 </div>
@@ -357,7 +360,7 @@ function all() {
                                     <div className="flex flex-col items-start space-y-2">
                                         <h1 className="font-bold text-2xl">LogistX</h1>
                                         <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br />
+                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
                                             haydovchilarimiz bilan tanishing
                                         </p>
                                     </div>
@@ -367,18 +370,18 @@ function all() {
 
                         </div>
                     </div>
-                </section> */}
+                </section>
 
-                {/* <section ref={certificatesRef} id="Certificats" className="max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-5 my-[70px]">
-                    <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[55px] text-center justify-center items-center">
+                <section ref={certificatesRef} id="Certificats" className="max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-3.5 md:space-y-5 my-[70px]">
+                    <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                         <i className="bi bi-buildings text-2xl"></i>
                         <h1 className="text-2xl">Certificats</h1>
                     </button>
-                    <h1 className=" font-bold text-4xl text-center">Industry Recognition</h1>
-                    <p className="text-center text-2xl">Our commitment to excellence is validated by industry-leading  <br />certifications and partnerships</p>
-                    <div className="grid grid-cols-2 gap-5">
-                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[467px] h-[370px]  hover:bg-[#F8FBFF]">
-                            <div className=" space-y-5">
+                    <h1 className=" font-bold text-[24px] md:text-4xl text-center">Industry Recognition</h1>
+                    <p className="text-center text-[16px] text-2xl">Our commitment to excellence is <br /> validated by industry-leading  <br />certifications and partnerships</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] md:w-[467px] md:h-[370px]  hover:bg-[#F8FBFF]">
+                            <div className="space-y-[20px] md:space-y-5">
                                 <div className=" flex justify-between">
                                     <div className=" bg-[#e0ecfb] w-[70px] h-[70px] flex items-center justify-center rounded-xl ">
                                         <img src="/logo/certificate.png" className="w-[24px] h-[28px]" />
@@ -386,120 +389,45 @@ function all() {
                                     <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[67px] h-[35px]">2023</div>
                                 </div>
                                 <div>
-                                    <h1 className="font-medium text-[28px]">AWS Advanced Partner</h1>
-                                    <p className="text-lg text-[#8D8D8D]">Amazon Web Services</p>
+                                    <h1 className="font-medium text-[20px] md:text-[28px]">AWS Advanced Partner</h1>
+                                    <p className=" text-[16px] md:text-lg text-[#8D8D8D]">Amazon Web Services</p>
                                 </div>
-                                <p className=" font-dmsans font-light italic text-[22px]">Cloud Solutions Architecture</p>
+                                <p className=" font-dmsans font-light italic text-[16px] md:text-[22px]">Cloud Solutions Architecture</p>
                                 <div className="flex gap-2.5">
                                     <img src="/logo/certificateSuccess.png" className="w-[24px] h-[24px] mt-0.5" />
-                                    <p className="text-[#8D8D8D] text-xl">Verified</p>
+                                    <p className="text-[#8D8D8D] text-[16px] md:text-xl">Verified</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[467px] h-[370px]  hover:bg-[#F8FBFF]">
-                            <div className=" space-y-5">
-                                <div className=" flex justify-between">
-                                    <div className=" bg-[#e0ecfb] w-[70px] h-[70px] flex items-center justify-center rounded-xl ">
-                                        <img src="/logo/certificate.png" className="w-[24px] h-[28px]" />
-                                    </div>
-                                    <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[67px] h-[35px]">2023</div>
-                                </div>
-                                <div>
-                                    <h1 className="font-medium text-[28px]">AWS Advanced Partner</h1>
-                                    <p className="text-lg text-[#8D8D8D]">Amazon Web Services</p>
-                                </div>
-                                <p className=" font-dmsans font-light italic text-[22px]">Cloud Solutions Architecture</p>
-                                <div className="flex gap-2.5">
-                                    <img src="/logo/certificateSuccess.png" className="w-[24px] h-[24px] mt-0.5" />
-                                    <p className="text-[#8D8D8D] text-xl">Verified</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[467px] h-[370px]  hover:bg-[#F8FBFF]">
-                            <div className=" space-y-5">
-                                <div className=" flex justify-between">
-                                    <div className=" bg-[#e0ecfb] w-[70px] h-[70px] flex items-center justify-center rounded-xl ">
-                                        <img src="/logo/certificate.png" className="w-[24px] h-[28px]" />
-                                    </div>
-                                    <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[67px] h-[35px]">2023</div>
-                                </div>
-                                <div>
-                                    <h1 className="font-medium text-[28px]">AWS Advanced Partner</h1>
-                                    <p className="text-lg text-[#8D8D8D]">Amazon Web Services</p>
-                                </div>
-                                <p className=" font-dmsans font-light italic text-[22px]">Cloud Solutions Architecture</p>
-                                <div className="flex gap-2.5">
-                                    <img src="/logo/certificateSuccess.png" className="w-[24px] h-[24px] mt-0.5" />
-                                    <p className="text-[#8D8D8D] text-xl">Verified</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[467px] h-[370px]  hover:bg-[#F8FBFF]">
-                            <div className=" space-y-5">
-                                <div className=" flex justify-between">
-                                    <div className=" bg-[#e0ecfb] w-[70px] h-[70px] flex items-center justify-center rounded-xl ">
-                                        <img src="/logo/certificate.png" className="w-[24px] h-[28px]" />
-                                    </div>
-                                    <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[67px] h-[35px]">2023</div>
-                                </div>
-                                <div>
-                                    <h1 className="font-medium text-[28px]">AWS Advanced Partner</h1>
-                                    <p className="text-lg text-[#8D8D8D]">Amazon Web Services</p>
-                                </div>
-                                <p className=" font-dmsans font-light italic text-[22px]">Cloud Solutions Architecture</p>
-                                <div className="flex gap-2.5">
-                                    <img src="/logo/certificateSuccess.png" className="w-[24px] h-[24px] mt-0.5" />
-                                    <p className="text-[#8D8D8D] text-xl">Verified</p>
-                                </div>
-                            </div>
-                        </div>
-                     
 
                     </div>
-                </section> */}
+                </section>
 
-                {/* <section ref={contactRef} id="Contact" className="bg-gradient-to-b from-[#0348A408] to-white flex flex-col justify-center items-center">
-                    <div className="max-w-[1440px] mx-auto items-center justify-center flex flex-col space-y-8 my-[70px] ">
-                        <div className="space-y-4 items-center justify-center flex flex-col text-center">
-                            <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[55px] text-center justify-center items-center">
+                <section ref={contactRef} id="Contact" className="bg-gradient-to-b from-[#0348A408] to-white flex flex-col justify-center items-center">
+                    <div className="max-w-[1440px] mx-auto items-center justify-center flex flex-col space-y-7   my-[70px] ">
+                        <div className="space-y-2 md:space-y-4 items-center justify-center flex flex-col text-center">
+                            <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                                 <i className="bi bi-buildings text-2xl"></i>
                                 <h1 className="text-2xl">Contact</h1>
                             </button>
-                            <h1 className="font-semibold text-4xl">Let's Start a Conversation</h1>
-                            <p className="text-xl">
-                                Have a project in mind? We'd love to hear from you. Send us a message <br />
-                                and we'll respond as soon as possible.
-                            </p>
+                            <h1 className="font-semibold text-[24px] md:text-4xl">Let's Start a Conversation</h1>
+                            <p className="text-[16px] md:text-xl">  Have a project in mind? We'd love to hear <br className="block lg:hidden" /> from you. Send us a message <br className="hidden md:block" />and we'll <br className="block lg:hidden" /> respond as soon as possible.</p>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="w-[710px] h-[666px] bg-white rounded-[24px] p-[36px] shadow-2xl shadow-gray-200 space-y-6">
-                            <div className="flex gap-3">
+                        <form onSubmit={handleSubmit} className="w-[335px] md:w-[710px] bg-white rounded-[24px] p-[15px] md:p-[36px] shadow-2xl shadow-gray-200 space-y-6">
+                            <div className="flex flex-col gap-3 md:flex-row">
                                 <div>
                                     <label className="block text-xl mb-2" htmlFor="name">
                                         Your Name
                                     </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        placeholder="Name"
-                                        required
-                                        className="w-[288px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    />
+                                    <input type="text" id="name" name="name" placeholder="Name" required className="w-[288px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xl mb-2" htmlFor="email">
                                         Email Address
                                     </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        placeholder="example@mail.com"
-                                        required
-                                        className="w-[288px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    />
+                                    <input type="email" id="email" name="email" placeholder="example@mail.com" required className="w-[288px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 </div>
                             </div>
 
@@ -507,44 +435,28 @@ function all() {
                                 <label className="block text-xl mb-2" htmlFor="company">
                                     Company
                                 </label>
-                                <input
-                                    type="text"
-                                    id="company"
-                                    name="company"
-                                    placeholder="Company name"
-                                    className="w-[638px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                />
+                                <input type="text" id="company" name="company" placeholder="Company name" className="w-[303px] md:w-[638px] h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                             </div>
 
                             <div>
                                 <label className="block text-xl mb-2" htmlFor="message">
                                     Message
                                 </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    placeholder="Tell us about your project"
-                                    rows="4"
-                                    required
-                                    className="w-[638px] h-[242px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                ></textarea>
+                                <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required className="w-[303px] md:w-[638px] h-[242px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" ></textarea>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="w-[638px] h-[52px] bg-[#0349A7] border-2 border-[#0349A7] hover:text-[#0349A7] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors"
-                            >
+                            <button type="submit" className="w-[303px] md:w-[638px] h-[52px] bg-[#0349A7] border-2 border-[#0349A7] hover:text-[#0349A7] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors" >
                                 Send
                             </button>
                         </form>
                     </div>
-                </section> */}
+                </section>
 
             </main>
 
-            {/* <footer className="bg-[rgb(0,17,40)] text-white">
-                <div className="max-w-[1440px] mx-auto flex flex-col py-[70px] space-y-[80px] ">
-                    <div className="flex flex-col md:flex-row md:gap-[62px] md:justify-between md:items-start ">
+            <footer className="bg-[rgb(0,17,40)] text-white">
+                <div className="max-w-[1440px] mx-auto flex flex-col py-[70px] space-y-[80px] p-6">
+                    <div className="flex flex-col md:flex-row md:gap-[62px] md:justify-between md:items-start  space-y-6">
                         <div className="flex flex-col space-y-[19px]">
                             <img src="/logo/tenzorsoft-logo.png" className="w-[94px] h-[60px]" />
                             <p className="text-xl ">Transforming businesses through <br /> innovative technology solutions <br /> since 2008.</p>
@@ -555,7 +467,29 @@ function all() {
                                 <button className="w-[44px] h-[44px] bg-white rounded-[12px] text-center text-black">f</button>
                             </div>
                         </div>
-                        <div className="flex flex-col space-y-[16px] text-[#8D8D8D] ">
+
+                        <div className=" block lg:hidden ">
+                            <div className="space-y-4">
+                                {faqs.map((faq, index) => (
+                                    <div key={index} className="border border-gray-200 rounded-lg shadow-sm">
+                                        <button className="w-full text-left px-4 py-3 flex justify-between items-center focus:outline-none" onClick={() => toggleIndex(index)}>
+                                            <span className="font-medium">{faq.question}</span>
+                                            <span className="text-xl">{openIndex === index ? "-" : "+"}</span>
+                                        </button>
+
+
+                                        {openIndex === index && (
+                                            <div className="px-4 pb-4 pt-2">
+                                                <button onClick={() => navigate(faq.link)} className=" text-white  py-2 rounded transition">
+                                                    {faq.answer}
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]  ">
                             <h1 className="text-xl font-semibold text-white">Template</h1>
                             <a>Home</a>
                             <a>About Us</a>
@@ -564,7 +498,7 @@ function all() {
                             <a>Certificates</a>
                             <a>Contact</a>
                         </div>
-                        <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
+                        <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]">
                             <h1 className="text-xl font-semibold text-white">Services</h1>
                             <a>Software development</a>
                             <a href="">1C Production</a>
@@ -574,7 +508,7 @@ function all() {
                             <a href="">Biometric systems</a>
                             <a href="">IT Services</a>
                         </div>
-                        <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
+                        <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]">
                             <h1 className="text-xl font-semibold text-white">Contact</h1>
                             <p>Tashkent city Mirabad <br /> district st. Magtymguly</p>
                             <span>+998(75) 556-56-56</span>
@@ -583,41 +517,16 @@ function all() {
                         <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
                             <h1 className="text-xl font-semibold text-white">Subscribe From</h1>
                             <input type="text" id="name" placeholder="Enter Your Email..."
-                                className="w-[326px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            />
-                            <button className="w-[326px] h-[52px] bg-[#0349A7] border border-[#0349A7] rounded-[12px] font-medium text-white text-lg">Subscribe</button>
+                                className="w-[360px] md:w-[326px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg  "/>
+                            <button className=" w-[360px] md:w-[326px] h-[52px] bg-[#0349A7] border border-[#0349A7] rounded-[12px] font-medium text-white text-lg">Subscribe</button>
                         </div>
 
-                        <div className="max-w-2xl mx-auto p-4">
-                            <h2 className="text-3xl font-bold mb-6 text-center">FAQ</h2>
-                            <div className="space-y-4">
-                                {faqs.map((faq, index) => (
-                                    <div key={index} className="border border-gray-200 rounded-lg shadow-sm">
-                                        <button className="w-full text-left px-4 py-3 flex justify-between items-center focus:outline-none" onClick={() => toggleIndex(index)}>
-                                            <span className="font-medium">{faq.question}</span>
-                                            <span className="text-xl">{openIndex === index ? "-" : "+"}</span>
-                                        </button>
-
-                                     
-                                        {openIndex === index && (
-                                            <div className="px-4 pb-4 pt-2">
-                                                <button onClick={() => navigate(faq.link)} 
-                                                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-                                                >
-                                                    {faq.answer}
-                                                </button>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     </div>
-                    <div className="space-y-[40px] text-[#8D8D8D]">
+                    <div className="space-y-3 md:space-y-[40px] text-[#8D8D8D]">
                         <hr className="border-t border-[#8D8D8D80]" />
-                        <div className="flex justify-between ">
-                            <p>© 2024 TechSolutions. All rights reserved.</p>
-                            <div className="flex gap-[60px]">
+                        <div className="flex flex-col justify-between md:flex-row space-y-4 md:space-y-0 text-center">
+                            <p className="">© 2024 TechSolutions. All rights reserved.</p>
+                            <div className="flex gap-[130px] md:gap-[60px]">
                                 <p>Terms & Conditions</p>
                                 <p>Privacy Policy</p>
                             </div>
@@ -625,7 +534,7 @@ function all() {
                     </div>
                 </div>
 
-            </footer> */}
+            </footer>
 
         </div>
     );
