@@ -140,7 +140,7 @@
       },
       "services": {
         "title": "Xizmatlar",
-         "software": "Dasturiy ta'minot ishlab chiqish",
+         "software": "Dasturiy ta'minot ",
           "1cProduction": "1C Ishlab chiqarish",
           "bitrix": "1C Bitrix",
           "antivirus": "Antivirus yechimlari",
@@ -176,7 +176,7 @@
 
      "item2":{
         "question": "Xizmatlar",
-        "software": "Dasturiy ta'minot ishlab chiqish",
+        "software": "Dasturiy ta'minot ",
         "1cProduction": "1C Ishlab chiqarish",
         "bitrix": "1C Bitrix",
         "antivirus": "Antivirus yechimlari",
