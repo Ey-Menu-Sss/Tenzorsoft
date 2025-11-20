@@ -9,6 +9,8 @@ const BOT_TOKEN = "8565375529:AAGecSewxKBWrMBUYWwxEukIEuCch7Px5fw";
 const CHAT_ID = "-1003257673634";
 
 function all() {
+    const [isOpen, setIsOpen] = useState(false);
+
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
@@ -223,7 +225,7 @@ function all() {
             <main className=" ">
 
                 <section id="partners" className="  my-8">
-                    <Partners/>
+                    <Partners />
                 </section>
 
                 <section ref={aboutRef} id="AboutUs" className=" bg-gradient-to-b from-[#0348A408] to-white flex">
@@ -420,7 +422,7 @@ function all() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
 
-                        <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] xl:w-[415px] xl:h-[370px]  hover:bg-[#F8FBFF]">
+                        <div onClick={() => setIsOpen(true)} className="cursor-pointer shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] xl:w-[415px] xl:h-[370px] hover:bg-[#F8FBFF]">
                             <div className="space-y-[20px] md:space-y-5">
                                 <div className=" flex justify-between">
                                     <div className=" bg-[#e0ecfb] w-[50px] xl:w-[70px] h-[50px]  xl:h-[70px] flex items-center justify-center rounded-xl ">
@@ -439,6 +441,19 @@ function all() {
                                 </div>
                             </div>
                         </div>
+
+                        {isOpen && (
+                            <div className="fixed inset-0 bg-black/30 bg-opacity-50 flex items-center justify-center z-50">
+                                <div className="bg-white p-4 rounded-xl relative flex flex-col">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <h1 className="font-bold text-xl">It Park</h1>
+                                        <button onClick={() => setIsOpen(false)} className="  font-bold text-2xl"> ×</button>
+                                    </div>
+
+                                    <img src="/image/itpark.jpeg" className="w-full h-[200px] md:h-[400px] object-contain rounded-lg" />
+                                </div>
+                            </div>
+                        )}
 
                         <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] xl:w-[415px] xl:h-[370px]  hover:bg-[#F8FBFF]">
                             <div className="space-y-[20px] md:space-y-5">
