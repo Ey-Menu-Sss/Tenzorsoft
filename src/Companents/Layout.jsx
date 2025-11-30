@@ -249,7 +249,7 @@ function Layout() {
                         <div className="flex flex-col space-y-[19px]">
                             <img src="/logo/tenzorsoft-logo.png" className="w-[94px] h-[60px]" />
                             <p className="text-xl md:w-[270px] lg:w-[290px] xl:w-[341px]">{t("footer.tagline")}</p>
-                            {/* cылки на сот сети */}
+                          
                             <div className="flex gap-[17px]">
 
                                 <a href="https://www.youtube.com/@TENZORSOFT-ITCOMPANY" target="_blank" rel="noopener noreferrer" >

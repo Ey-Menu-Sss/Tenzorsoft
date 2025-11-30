@@ -134,9 +134,9 @@ function all() {
                             
                             <h1 className=" font-semibold text-[28px] md:text-4xl w-[335px] md:w-[560px]">{t("aboutSection.title")}</h1>
                             <p className="text-xl w-[335px] md:w-[600px] lg:w-[800px]">{t("aboutSection.subtitle")}</p>
-                            <Link to="/aboutus" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
+                            {/* <Link to="/aboutus" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
                             {t("portfolioSection.cta")}
-                        </Link>
+                        </Link> */}
                         </div>
 
                         <div className="flex flex-col xl:flex-row items-center justify-center gap-[49px]">
@@ -263,9 +263,9 @@ function all() {
                         </button>
                         <h1 className="font-semibold text-[24px] md:text-4xl  text-center  md:w-[440px]">{t("portfolioSection.title")}</h1>
                         <p className=" text-center text-[16px] md:text-xl w-[335px] md:w-[700px]">{t("portfolioSection.description")}</p>
-                        <Link to="/portfolio" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
+                        {/* <Link to="/portfolio" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
                             {t("portfolioSection.cta")}
-                        </Link>
+                        </Link> */}
 
                         <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
                             <a href="https://logistx.uz" target="_blank" rel="noopener noreferrer" className="block">
