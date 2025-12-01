@@ -128,14 +128,14 @@ function Layout() {
                 { text: t("faq.item2.itservices"), link: "/dashboard" },
             ]
         },
-        {
-            question: t("faq.item3.question"),
-            answers: [
-                { text: t("faq.item3.address") },
-                { text: t("faq.item3.phone") },
-                { text: t("faq.item3.email") },
-            ]
-        }
+        // {
+        //     question: t("faq.item3.question"),
+        //     answers: [
+        //         { text: t("faq.item3.address") },
+        //         { text: t("faq.item3.phone") },
+        //         { text: t("faq.item3.email") },
+        //     ]
+        // }
     ];
 
     return (
@@ -190,7 +190,79 @@ function Layout() {
                 <Outlet context={{ homeRef, aboutRef, contactRef, certificatesRef, servicesRef, portfolioRef }} />
             </main>
 
-            <section ref={contactRef} id="Contact" className="bg-gradient-to-b from-[#0348A408] to-white flex flex-col justify-center items-center">
+            <section ref={contactRef} id="Contact" className="bg-[#F2F2F2] h-full flex flex-col justify-center items-center">
+                <div className="max-w-[1440px] mx-auto flex flex-col xl:flex-row items-center justify-center md:justify-between md:w-full py-8 px-[4px] space-y-[20px] xl:space-y-0">
+                    <div className="flex flex-col justify-between gap-[20px] md:gap-[60px] h-full ">
+                        <div className="space-y-2 md:space-y-4 items-center justify-center flex flex-col text-center">
+                            <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
+                                <img src="/logo/contact.png" className="w-[20px]" />
+                                <h1 className="text-2xl">{t("contactSection.badge")}</h1>
+                            </button>
+                            <h1 className="font-semibold text-[24px] md:text-4xl">{t("contactSection.title")}</h1>
+                            <p className="text-[16px] md:text-xl w-[295px] md:w-[690px]">{t("contactSection.description")}</p>
+                        </div>
+
+                        <div className="space-y-[16px] flex flex-col items-start justify-start">
+                            <div className="bg-white w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
+                                <img src="/logo/location.svg" className="w-[32px]" />
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">Tashkent city Mirabad district st. Magtymguly</p>
+                            </div>
+                            <div className="bg-white  w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
+                                <img src="/logo/phone.svg" className="w-[32px]" />
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">+998(75) 556-56-56 +998(75) 556-56-56</p>
+                            </div>
+                            <div className="bg-white  w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
+                                <img src="/logo/email.svg" className="w-[32px]" />
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">contact@techsolution.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form onSubmit={handleSubmit} className="w-[335px] md:w-[710px] bg-white rounded-[24px] p-[15px] md:p-[36px] shadow-2xl shadow-gray-200 space-y-6">
+                        <div className="flex flex-col gap-3 md:flex-row">
+                            <div>
+                                <label className="block text-xl mb-2" htmlFor="name">
+                                    {t("contactSection.form.nameLabel")}
+                                </label>
+                                <input type="text" id="name" name="name" placeholder={t("contactSection.form.namePlaceholder")} required className="w-[303px] md:w-[311px] h-[48px]  px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                            </div>
+
+                            <div>
+                                <label className="block text-xl mb-2" htmlFor="email">
+                                    {t("contactSection.form.emailLabel")}
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="example@mail.com" required className="w-[303px] md:w-[311px] h-[48px]  px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="block text-xl mb-2" htmlFor="company">
+                                {t("contactSection.form.companyLabel")}
+                            </label>
+                            <input type="text" id="company" name="company" placeholder={t("contactSection.form.companyPlaceholder")} className="w-[303px] md:w-[638px] h-[48px]   px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        </div>
+
+                        <div>
+                            <label className="block text-xl mb-2" htmlFor="message">
+                                {t("contactSection.form.messageLabel")}
+                            </label>
+                            <textarea id="message" name="message" placeholder={t("contactSection.form.messagePlaceholder")} rows="4" required className="w-[303px] md:w-[638px] h-[200px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" ></textarea>
+                        </div>
+
+                        <div>
+                            <input type="file" name="file" className="flex items-center display:none w-[303px] md:w-[638px] h-[48px] px-4 py-3 border border-gray-300 rounded-lg " />
+                        </div>
+
+                        <button type="submit" className="w-[303px] md:w-[638px] h-[50px] bg-[#006DFF] border-2 border-[#006DFF] hover:text-[#006DFF] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors" >
+                            {t("contactSection.submit")}
+                        </button>
+                    </form>
+
+                </div>
+            </section>
+
+
+            {/* <section ref={contactRef} id="Contact" className="bg-gradient-to-b from-[#0348A408] to-white flex flex-col justify-center items-center">
                 <div className="max-w-[1440px] mx-auto items-center justify-center flex flex-col space-y-7   my-[70px] px-[20px] md:px-2 lg:px-3 2xl:px-0 ">
                     <div className="space-y-2 md:space-y-4 items-center justify-center flex flex-col text-center">
                         <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
@@ -241,7 +313,7 @@ function Layout() {
                         </button>
                     </form>
                 </div>
-            </section>
+            </section> */}
 
             <footer className="bg-[rgb(0,17,40)]  text-white">
                 <div className="max-w-[1440px] mx-auto flex flex-col py-[70px] space-y-[80px]  px-[20px] md:px-4 lg:px-3 2xl:px-0">
@@ -249,7 +321,7 @@ function Layout() {
                         <div className="flex flex-col space-y-[19px]">
                             <img src="/logo/tenzorsoft-logo.png" className="w-[94px] h-[60px]" />
                             <p className="text-xl md:w-[270px] lg:w-[290px] xl:w-[341px]">{t("footer.tagline")}</p>
-                          
+
                             <div className="flex gap-[17px]">
 
                                 <a href="https://www.youtube.com/@TENZORSOFT-ITCOMPANY" target="_blank" rel="noopener noreferrer" >
@@ -314,14 +386,14 @@ function Layout() {
                             <a href="" className="hover:text-white">{t("footer.columns.services.itservices")}</a>
                         </div>
 
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
+                        {/* <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
                             <h1 className="text-xl font-semibold text-white">
                                 {t("footer.columns.contact.title")}
                             </h1>
                             <p className="hover:text-white">Tashkent city Mirabad <br /> district st. Magtymguly</p>
                             <span className="hover:text-white">+998 95 460 10 10</span>
                             <p className="hover:text-white">info@tenzorsoft.com</p>
-                        </div>
+                        </div> */}
 
                         <div className="space-y-3">
                             {/* фак */}
@@ -383,3 +455,63 @@ function Layout() {
 }
 
 export default Layout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <form onSubmit={handleSubmit} className="w-[335px] md:w-[700px] h-[620px] bg-white rounded-[24px] p-[20px] md:p-[36px] shadow-2xl shadow-gray-200 space-y-3">
+//                     <div className="flex flex-col gap-3 md:flex-row">
+//                         <div>
+//                             <label className="block text-[16px] md:text-xl mb-2" htmlFor="name">
+//                                 {t("contactSection.form.nameLabel")}
+//                             </label>
+//                             <input type="text" id="name" name="name" placeholder={t("contactSection.form.namePlaceholder")} required className="w-[303px] md:w-[311px] h-[48px] md:h-[45px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#579094] focus:border-transparent text-gray-500" />
+//                         </div>
+
+//                         <div>
+//                             <label className="block text-[16px] md:text-xl mb-2" htmlFor="email">
+//                                 {t("contactSection.form.emailLabel")}
+//                             </label>
+//                             <input type="email" id="email" name="email" placeholder="example@mail.com" required className="w-[303px] md:w-[311px] h-[48px] md:h-[45px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#579094] focus:border-transparent text-gray-500" />
+//                         </div>
+//                     </div>
+
+//                     <div>
+//                         <label className="block text-[16px] md:text-xl mb-2" htmlFor="company">
+//                             {t("contactSection.form.companyLabel")}
+//                         </label>
+//                         <input type="text" id="company" name="company" placeholder={t("contactSection.form.companyPlaceholder")} className="w-[303px] md:w-[638px] h-[48px] md:h-[45px]  px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#579094] focus:border-transparent text-gray-500" />
+//                     </div>
+
+//                     <div>
+//                         <label className="block text-[16px] md:text-xl mb-2" htmlFor="message">
+//                             {t("contactSection.form.messageLabel")}
+//                         </label>
+//                         <textarea id="message" name="message" placeholder={t("contactSection.form.messagePlaceholder")} rows="4" required className="w-[303px] md:w-[638px] h-[150px] md:h-[200px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#579094] focus:border-transparent text-gray-500" ></textarea>
+//                     </div>
+
+//                     <div className="w-[303px] md:w-[638px]">
+//                         <label className="flex items-center gap-3 border border-gray-300 p-2 rounded-lg cursor-pointer text-gray-500">
+//                             <img src="/icn/upload.png" alt="logo" className="w-6 h-6" />
+//                             <span className="truncate"> {fileName || "Выбрать файл"} </span>
+//                             <input type="file" className="hidden" onChange={handleFileChange} />
+//                         </label>
+//                     </div>
+
+
+//                     <button type="submit" className="w-[303px] md:w-[638px] h-[45px] md:h-[52px] bg-[#579094] border-2 border-[#579094] hover:text-[#579094] text-white py-2 px-4 rounded-full hover:bg-white transition-colors" >
+//                         {t("contactSection.submit")}
+//                     </button>
+//                 </form>
