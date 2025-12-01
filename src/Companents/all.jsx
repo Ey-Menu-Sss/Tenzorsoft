@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 import Partners from "./partners";
 import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
 
 
 
@@ -255,6 +256,8 @@ function all() {
                     </div>
                 </section>
 
+
+
                 <section ref={portfolioRef} id="Porfolio" className=" bg-gradient-to-b from-[#0348A408] to-white  mt-[66px] flex items-center">
                     <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[20px] md:my-[70px] space-y-2 md:space-y-4 px-[20px] md:px-2 lg:px-3 2xl:px-0">
                         <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
@@ -327,9 +330,32 @@ function all() {
                     </button>
                     <h1 className=" font-bold text-[24px] md:text-4xl text-center">{t("certificateSection.title")}</h1>
                     <p className="text-center text-[16px] md:text-xl w-[295px] md:w-[690px] ">{t("certificateSection.description")}</p>
-                    <div className="flex items-center justify-center">
-                        {/*
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"> */}
+                    <Carousel/>
+                </section>
+
+            </main>
+
+        </div>
+    );
+}
+
+export default all;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                         {certificates.map((card) => (
                             <div key={card.id}>
                                 <div onClick={() => setOpenId(card.id)} className="cursor-pointer shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] xl:w-[415px] xl:h-[370px] hover:bg-[#F8FBFF]" >
@@ -363,7 +389,6 @@ function all() {
                                     </div>
                                 </div>
 
-                                {/* Modal */}
                                 {openId === card.id && (
                                     <div className="fixed inset-0 bg-black/80 bg-opacity-50 flex items-center justify-center z-50">
                                         <div className="p-2 md:p-4 rounded-xl relative flex flex-col">
@@ -383,14 +408,4 @@ function all() {
                                 )}
                             </div>
                         ))}
-                    </div>
-
-                </section>
-
-            </main>
-
-        </div>
-    );
-}
-
-export default all;
+                    </div> */}
