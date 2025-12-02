@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const images = [
-    "./image/itparkt.jpg",
-    "./image/itparkt.jpg",
-    "./image/itparkt.jpg",
+    "./image/tenzor.avif",
+    "./image/tenzor.avif",
+    "./image/tenzor.avif",
 ];
 
 export default function Carousel() {
@@ -14,7 +14,7 @@ export default function Carousel() {
     useEffect(() => {
         if (containerRef.current) {
             const w = containerRef.current.offsetWidth;
-            setSlideWidth(w * 0.22); 
+            setSlideWidth(w * 0.22);
         }
     }, []);
 

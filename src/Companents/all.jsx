@@ -109,7 +109,7 @@ function all() {
     return (
         <div>
 
-            <header className="relative bg-[url('/baground/Hopebg.svg')] bg-cover bg-center h-screen ">
+            <header className="relative bg-[url('/baground/bgHope.avif')] bg-cover bg-center h-screen ">
                 <section id="hero" ref={homeRef} className="flex items-center text-white h-screen pt-[100px] max-w-[1440px] mx-auto px-[20px] md:px-2 lg:px-3 2xl:px-0">
                     <div className="space-y-6">
                         <h1 className="text-5xl md:text-6xl  font-semibold">  <Trans i18nKey="hero.title" /> </h1>
@@ -142,7 +142,7 @@ function all() {
 
                         <div className="flex flex-col xl:flex-row items-center justify-center gap-[49px]">
 
-                            <img src="/image/AboutUs.png" className="h-[335px] md:h-[687px] w-[335px] md:w-[680px] lg:w-[600px] 2xl:w-[690px] rounded-2xl " />
+                            <img src="/image/AboutUs.avif" className="h-[335px] md:h-[687px] w-[335px] md:w-[680px] lg:w-[600px] 2xl:w-[690px] rounded-3xl " />
 
                             <div className="space-y-[20px]">
 
@@ -256,8 +256,6 @@ function all() {
                     </div>
                 </section>
 
-
-
                 <section ref={portfolioRef} id="Porfolio" className=" bg-gradient-to-b from-[#0348A408] to-white  mt-[66px] flex items-center">
                     <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[20px] md:my-[70px] space-y-2 md:space-y-4 px-[20px] md:px-2 lg:px-3 2xl:px-0">
                         <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
@@ -274,7 +272,7 @@ function all() {
                             <a href="https://logistx.uz" target="_blank" rel="noopener noreferrer" className="block">
                                 <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden  ">
                                     <div className="overflow-hidden rounded-xl">
-                                        <img src="/image/LogistX.png" className="w-[591px] sm:w-[681px] md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
+                                        <img src="/image/LogistX.avif" className="w-[591px] sm:w-[681px] md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
                                     </div>
                                     <div className="flex justify-between items-center m-2">
                                         <div className="flex flex-col items-start space-y-2">
@@ -293,7 +291,7 @@ function all() {
                             <a href="https://bepulgps.uz" target="_blank" rel="noopener noreferrer" className="block">
                                 <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden ">
                                     <div className="overflow-hidden rounded-xl">
-                                        <img src="/image/BepulGPS.png" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
+                                        <img src="/image/BepulGPS.avif" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
                                     </div>
                                     <div className="flex justify-between items-center m-2">
                                         <div className="flex flex-col items-start space-y-2">
@@ -308,7 +306,7 @@ function all() {
                             <a href="https://xmed.uz/" target="_blank" rel="noopener noreferrer" className="block">
                                 <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden hidden lg:block">
                                     <div className="overflow-hidden rounded-xl">
-                                        <img src="/image/Xmed.png" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
+                                        <img src="/image/Xmed.avif" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
                                     </div>
                                     <div className="flex justify-between items-center m-2">
                                         <div className="flex flex-col items-start space-y-2">
