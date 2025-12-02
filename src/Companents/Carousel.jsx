@@ -4,20 +4,17 @@ const images = [
     "./image/itparkt.jpg",
     "./image/itparkt.jpg",
     "./image/itparkt.jpg",
-
 ];
 
 export default function Carousel() {
     const [active, setActive] = useState(0);
-    const timeout = useRef(null);
-
     const containerRef = useRef(null);
     const [slideWidth, setSlideWidth] = useState(350);
 
     useEffect(() => {
         if (containerRef.current) {
             const w = containerRef.current.offsetWidth;
-            setSlideWidth(w * 0.25);
+            setSlideWidth(w * 0.22); 
         }
     }, []);
 
@@ -29,57 +26,45 @@ export default function Carousel() {
         setActive((prev) => (prev - 1 + images.length) % images.length);
     };
 
-    useEffect(() => {
-        timeout.current = setTimeout(next, 3000);
-        return () => clearTimeout(timeout.current);
-    }, [active]);
+    const getOffset = (index) => {
+        if (index === active) return 0;
+        if ((active + 1) % images.length === index) return 1;
+        if ((active - 1 + images.length) % images.length === index) return -1;
 
-    const getWrappedOffset = (index, active, length) => {
-        let offset = index - active;
-
-        if (offset > length / 2) offset -= length;
-        if (offset < -length / 2) offset += length;
-
-        return offset;
+        return 2;
     };
 
     return (
         <div className="w-full flex justify-center">
-            <div ref={containerRef} className="relative w-full max-w-7xl  h-[366px] overflow-hidden">
-
-                <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-black/40 text-white px-3 py-2 rounded-full">
-                    ❮
-                </button>
-
+            <div ref={containerRef} className="relative w-full max-w-7xl h-[366px] overflow-hidden" >
                 <div className="relative w-full h-[400px] flex items-center justify-center">
                     {images.map((src, i) => {
-                        const offset = getWrappedOffset(
-                            i,
-                            active,
-                            images.length
-                        );
-
-                        const scale = i === active ? 0.8 :0.7;
+                        const offset = getOffset(i);
+                        const scale = offset === 0 ? 0.85 : 0.75;
                         const translateX = offset * slideWidth;
 
+                        const handleClick = () => {
+                            if (offset === -1) prev();
+                            if (offset === 1) next();
+                        };
+
                         return (
-                            <img key={i} src={src} className="absolute h-[200px] border border-gray-300 rounded-xl transition-all duration-700"
+                            <img
+                                key={i}
+                                src={src}
+                                onClick={handleClick}
+                                className="absolute border border-gray-300 rounded-xl transition-all duration-700 cursor-pointer"
                                 style={{
-                                    height: "370px", 
+                                    height: "370px",
                                     width: "550px",
                                     transform: `translateX(${translateX}px) scale(${scale})`,
-                                    opacity: i === active ? 1 : 0.8, //празрачнось
-                                    zIndex: i === active ? 20 : 10, //зади стояший
+                                    opacity: offset === 0 ? 1 : 0.75,
+                                    zIndex: offset === 0 ? 20 : 10,
                                 }}
                             />
                         );
                     })}
                 </div>
-
-
-                <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-black/40 text-white px-3 py-2 rounded-full" >
-                    ❯
-                </button>
             </div>
         </div>
     );
