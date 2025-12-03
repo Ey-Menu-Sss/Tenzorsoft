@@ -133,7 +133,7 @@ function all() {
                                 <h1 className="text-2xl"> {t("aboutSection.badge")}</h1>
                             </button>
                             
-                            <h1 className=" font-semibold text-[28px] md:text-4xl w-[335px] md:w-[560px]">{t("aboutSection.title")}</h1>
+                            <h1 className=" font-semibold text-[28px] md:text-4xl w-[335px] md:w-[600px] xl:w-[900px]">{t("aboutSection.title")}</h1>
                             <p className="text-xl w-[335px] md:w-[600px] lg:w-[800px]">{t("aboutSection.subtitle")}</p>
                             {/* <Link to="/aboutus" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
                             {t("portfolioSection.cta")}
@@ -237,7 +237,7 @@ function all() {
                             <i className="bi bi-gear text-2xl"></i>
                             <h1 className="text-2xl">{t("servicesSection.badge")}</h1>
                         </button>
-                        <p className="font-semibold text-[28px] md:text-4xl w-[335px] md:w-[560px]">{t("servicesSection.description")} </p>
+                        <p className="font-semibold text-[28px] md:text-4xl w-[335px] md:w-[600px] xl:w-[900px]">{t("servicesSection.description")} </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 gap-4">
                         {cardsData.map((card, index) => (
@@ -262,7 +262,7 @@ function all() {
                             <img src="/logo/uil.png" className="w-[20px]" />
                             <h1 className="text-2xl">{t("portfolioSection.badge")}</h1>
                         </button>
-                        <h1 className="font-semibold text-[24px] md:text-4xl  text-center  md:w-[440px]">{t("portfolioSection.title")}</h1>
+                        <h1 className="font-semibold text-[24px] md:text-4xl  text-center  w-[335px] md:w-[600px] xl:w-[900px]">{t("portfolioSection.title")}</h1>
                         <p className=" text-center text-[16px] md:text-xl w-[335px] md:w-[700px]">{t("portfolioSection.description")}</p>
                         {/* <Link to="/portfolio" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
                             {t("portfolioSection.cta")}

@@ -9,13 +9,13 @@
     "readMore": "Batafsil o'qish"
   },
   "hero": {
-    "title": "IT yechimlari <br/> va texnologiyalari",
-    "description": "Biz biznesingizni raqobatchilardan bir qadam oldinda ushlab turishga <br/> yordam beradigan ilg'or IT yechimlari va zamonaviy texnologiyalarni taklif etamiz.",
+    "title": "IT yechimlari va texnologiyalari",
+    "description": "Biz biznesingizni raqobatchilardan bir qadam oldinda ushlab turishga yordam beradigan ilg'or IT yechimlari va zamonaviy texnologiyalarni taklif etamiz.",
     "cta": "Batafsil o'qish"
   },
   "aboutSection": {
     "badge": "Biz haqimizda",
-    "title": "Biz ilhomli va ijodkor onglardan iborat jamoa yaratyapmiz",
+    "title": "Biz yuqori malakali va tajribali mutaxassislar jamoasi bo‘lib, innovatsion yechimlar yaratishga intilamiz.",
     "subtitle": "Tenzor Soft LLC 2008 yildan beri O'zbekistonda IT xizmatlari bozorida faoliyat yuritayotgan yetakchi dasturiy ta'minot ishlab chiqaruvchisidir. 18 yildan ortiq vaqt davomida biz ishonchli raqamli yechimlar yaratib kelmoqdamiz.",
     "whyTitle": "Nega aynan biz?",
     "whyDescription": "IT sohasidagi 18 yildan ortiq tajribamiz tufayli biz innovatsion yechimlarni izlayotgan bizneslar uchun ishonchli hamkor bo'ldik. Mutaxassislarimizning bilim va qarashlari murakkab vazifalarni ham hal etishga yordam beradi.",
@@ -40,7 +40,7 @@
   },
   "servicesSection": {
     "badge": "Xizmatlar",
-    "description": "Siz uchun strategik va samarali huquqiy yechimlarni taqdim etish",
+    "description": "Biz biznesingiz va huquqiy ehtiyojlaringiz uchun strategik va samarali yechimlarni taklif qilamiz.",
     "cards": [
       {
         "title": "Dasturiy ta'minot ishlab chiqish",
@@ -78,7 +78,7 @@
   },
   "portfolioSection": {
     "badge": "Portfolio",
-    "title": "Eng ajoyib loyihalarimizni kashf eting.",
+    "title": "Eng muvaffaqiyatli va ilg‘or loyihalarimizni ko‘ring.",
     "description": "Biz startaplar va yirik brendlarni muvaffaqiyatga yetaklaydigan, real ta'sir ko'rsatadigan moslashtirilgan yechimlarni yaratamiz.",
     "cta": "Batafsil o'qish",
     "projects": [
@@ -135,7 +135,7 @@
 
   "contactSection": {
     "badge": "Bog'lanish",
-    "title": "Keling, suhbatni boshlaymiz",
+    "title": "Biz bilan bog‘laning.",
     "description": "Loyihangiz bormi? Sizdan xabar olishdan mamnun bo'lamiz. Xabar qoldiring va biz imkon qadar tez javob beramiz.",
     "form": {
       "nameLabel": "Ismingiz",

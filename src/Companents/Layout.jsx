@@ -191,8 +191,8 @@ function Layout() {
             </main>
 
             <section ref={contactRef} id="Contact" className="bg-[#F2F2F2] h-full flex flex-col justify-center items-center">
-                <div className="max-w-[1440px] mx-auto flex flex-col xl:flex-row items-center justify-center md:justify-between md:w-full py-8 px-[4px] space-y-[20px] xl:space-y-0">
-                    <div className="flex flex-col justify-between gap-[20px] md:gap-[60px] h-full ">
+                <div className="max-w-[1440px] mx-auto flex flex-col xl:flex-row items-start justify-start md:justify-between md:w-full py-8 px-[4px] space-y-[20px] xl:space-y-0">
+                    <div className="flex flex-col justify-between mt-2 gap-[20px] md:gap-[90px] h-full ">
                         <div className="space-y-2 md:space-y-4 items-center justify-center flex flex-col text-center">
                             <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                                 <img src="/logo/contact.png" className="w-[20px]" />
@@ -318,7 +318,7 @@ function Layout() {
             <footer className="bg-[rgb(0,17,40)]  text-white">
                 <div className="max-w-[1440px] mx-auto flex flex-col py-[70px] space-y-[80px]  px-[20px] md:px-4 lg:px-3 2xl:px-0">
                     <div className="flex flex-col sm:flex-row sm:justify-between md:items-start gap-3 space-y-6">
-                        <div className="flex flex-col space-y-[19px]">
+                        <div className="flex flex-col space-y-[20px] md:space-y-[40px]">
                             <img src="/logo/tenzorsoft-logo.png" className="w-[94px] h-[60px]" />
                             <p className="text-xl md:w-[270px] lg:w-[290px] xl:w-[341px]">{t("footer.tagline")}</p>
 

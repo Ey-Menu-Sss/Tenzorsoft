@@ -9,17 +9,17 @@
     "readMore": "Read More"
   },
   "hero": {
-    "title": "IT solutions <br/> and technologies",
-    "description": "We offer cutting-edge IT solutions and modern technologies that will <br/> help your business stay one step ahead of the competition.",
+    "title": "IT solutions and technologies",
+    "description": "We offer cutting-edge IT solutions and modern technologies that will  help your business stay one step ahead of the competition.",
     "cta": "Read More"
   },
   
   "aboutSection": {
     "badge": "About Us",
-    "title": "We Create Bunch Of Enthusiastic & Creative Minds",
+    "title": "We are a team of highly skilled and experienced professionals, dedicated to creating innovative solutions",
     "subtitle": "Tenzor Soft LLC is a leading software developer in Uzbekistan, operating in the IT services market since 2008. For over 18 years, we have been delivering reliable digital solutions.",
     "whyTitle": "Why Choose Us?",
-    "whyDescription": "With over 18 years of experience  in the IT industry, we've established <0/> ourselves as a trusted partner for businesses seeking innovative solutions. <0/> Our team of experts brings together diverse skills and perspectives to tackle <0/> even the most complex challenges.",
+    "whyDescription": "With over 18 years of experience  in the IT industry, we've established  ourselves as a trusted partner for businesses seeking innovative solutions. Our team of experts brings together diverse skills and perspectives to tackle  even the most complex challenges.",
     "features": [
       {
         "title": "Effective project  management",
@@ -42,7 +42,7 @@
 
   "servicesSection": {
     "badge": "Services",
-    "description": "Providing strategic and effective legal solutions for you",
+    "description": "We offer strategic and effective solutions for your business and legal needs.",
     "cards": [
       {
         "title": "Software development",
@@ -81,7 +81,7 @@
 
   "portfolioSection": {
     "badge": "Portfolio",
-    "title": "Explore Our Most Remarkable Projects.",
+    "title": "Explore our most successful and cutting-edge projects.",
     "description": "We craft customized solutions that empower both startups and established brands, driving success and delivering real impact.",
     "cta": "Read more",
     "projects": [
@@ -135,7 +135,7 @@
 
   "contactSection": {
     "badge": "Contact",
-    "title": "Let's Start a Conversation",
+    "title": "Get in touch with us.",
     "description": "Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
     "form": {
       "nameLabel": "Your Name",
