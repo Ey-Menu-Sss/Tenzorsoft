@@ -205,15 +205,15 @@ function Layout() {
                         <div className="space-y-[16px] flex flex-col items-start justify-start">
                             <div className="bg-white w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
                                 <img src="/logo/location.svg" className="w-[32px]" />
-                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">Tashkent city Mirabad district st. Magtymguly</p>
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">Tashkent city Mirabad district st. Sarbon 2A </p>
                             </div>
                             <div className="bg-white  w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
                                 <img src="/logo/phone.svg" className="w-[32px]" />
-                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">+998(75) 556-56-56 +998(75) 556-56-56</p>
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">+998 95 460 10 10</p>
                             </div>
                             <div className="bg-white  w-[345px] md:w-[655px] h-[73px] rounded-[24px] flex justify-start items-center gap-[20px] px-4">
                                 <img src="/logo/email.svg" className="w-[32px]" />
-                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">contact@techsolution.com</p>
+                                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[24px]">tenzorsoft.com</p>
                             </div>
                         </div>
                     </div>
@@ -351,7 +351,7 @@ function Layout() {
                             </div>
                         </div>
 
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D] ">
+                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#c8c8c8]">
                             <h1 className="text-xl font-semibold text-white">
                                 {t("footer.columns.template.title")}
                             </h1>
@@ -375,7 +375,7 @@ function Layout() {
                             </a>
                         </div>
 
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
+                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#c8c8c8]">
                             <h1 className="text-xl font-semibold text-white">{t("footer.columns.services.title")}</h1>
                             <a href="" className="hover:text-white">{t("footer.columns.services.software")}</a>
                             <a href="" className="hover:text-white">{t("footer.columns.services.1cProduction")}</a>
@@ -386,14 +386,6 @@ function Layout() {
                             <a href="" className="hover:text-white">{t("footer.columns.services.itservices")}</a>
                         </div>
 
-                        {/* <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
-                            <h1 className="text-xl font-semibold text-white">
-                                {t("footer.columns.contact.title")}
-                            </h1>
-                            <p className="hover:text-white">Tashkent city Mirabad <br /> district st. Magtymguly</p>
-                            <span className="hover:text-white">+998 95 460 10 10</span>
-                            <p className="hover:text-white">info@tenzorsoft.com</p>
-                        </div> */}
 
                         <div className="space-y-3">
                             {/* фак */}
@@ -427,11 +419,11 @@ function Layout() {
                                 </div>
                             </div>
                             {/* сабскрай */}
-                            <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
+                            <div className="flex flex-col space-y-[16px] text-white">
                                 <h1 className="text-xl font-semibold text-white">
                                     {t("footer.subscribeHeading")}
                                 </h1>
-                                <input type="text" id="name" placeholder={t("footer.subscribePlaceholder")} className="md:w-[420px] lg:w-[200px] xl:w-[320px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg" />
+                                <input type="text" id="name" placeholder={t("footer.subscribePlaceholder")} className="md:w-[420px] lg:w-[200px] xl:w-[320px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg placeholder-white" />
                                 <button className="md:w-[420px] lg:w-[200px] xl:w-[320px] h-[52px] hover:bg-white hover:text-[#006DFF] bg-[#006DFF] hover:border-2 hover:border-[#006DFF] rounded-[12px] font-medium text-white text-lg">
                                     {t("footer.subscribeCta")}
                                 </button>
@@ -440,7 +432,7 @@ function Layout() {
                         </div>
                     </div>
 
-                    <div className="space-y-3 md:space-y-[40px] text-[#8D8D8D]">
+                    <div className="space-y-3 md:space-y-[40px] text-[#c8c8c8]">
                         <hr className="border-t border-[#8D8D8D80]" />
                         <div className="flex flex-col justify-between md:flex-row space-y-4 md:space-y-0 text-center">
                             <p className="">{t("footer.rights")}</p>

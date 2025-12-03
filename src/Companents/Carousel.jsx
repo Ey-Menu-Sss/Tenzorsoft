@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 
 const images = [
     "./image/tenzor.avif",
-    "./image/tenzor.avif",
-    "./image/tenzor.avif",
+    "./image/Litsenziya.avif",
+    "./image/Kaspersky.avif",
+    "./image/Tastiqnoma.avif",
 ];
 
 export default function Carousel() {
@@ -40,6 +41,10 @@ export default function Carousel() {
                 <div className="relative w-full h-[400px] flex items-center justify-center">
                     {images.map((src, i) => {
                         const offset = getOffset(i);
+
+                        // 👉 Показываем только 3: левую (-1), активную (0), правую (1)
+                        if (![-1, 0, 1].includes(offset)) return null;
+
                         const scale = offset === 0 ? 0.85 : 0.75;
                         const translateX = offset * slideWidth;
 
@@ -64,6 +69,7 @@ export default function Carousel() {
                             />
                         );
                     })}
+
                 </div>
             </div>
         </div>
