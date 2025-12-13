@@ -61,7 +61,7 @@ function All() {
     },
   ];
 
-  const { homeRef, aboutRef, certificatesRef, servicesRef, portfolioRef } =
+  const { homeRef, aboutRef, certificatesRef, servicesRef, portfolioRef, galleryRef } =
     useOutletContext();
 
   return (
@@ -405,7 +405,8 @@ function All() {
           <Carousel />
         </section>
 
-        <section id="gallery">
+        <section id="gallery" className="mt-20" ref={galleryRef}>
+          
           <Gallery />
         </section>
       </main>

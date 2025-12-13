@@ -6,6 +6,7 @@
     "portfolio": "Портфолио",
     "certificates": "Сертификаты",
     "contact": "Контакты",
+    "gallery": "Галлереая",
     "readMore": "Подробнее"
   }, 
   "hero": {
@@ -96,6 +97,11 @@
       }
     ]
   },
+  "gellerySection": {
+  "badge": "Галлерея",
+  "title": "Наша галлерея",
+  "description": "Фотографии разработчиков нашей компании."
+},
   
 "certificateSection": {
   "badge": "Сертификаты",

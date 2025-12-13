@@ -6,6 +6,7 @@
     "portfolio": "Portfolio",
     "certificates": "Certificates",
     "contact": "Contact",
+    "gallery": "Gallery",
     "readMore": "Read More"
   },
   "hero": {
@@ -99,6 +100,13 @@
       }
     ]
   },
+
+  "gellerySection": {
+  "badge": "Gallery",
+  "title": "Our Gallery",
+  "description": "Photos of our company's developers."
+},
+
 "certificateSection": {
   "badge": "Certificats",
   "title": "Industry Recognition",

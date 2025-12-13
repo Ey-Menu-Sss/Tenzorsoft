@@ -19,6 +19,7 @@ function Layout() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const galleryRef = useRef(null);
   const certificatesRef = useRef(null);
   const servicesRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -157,6 +158,7 @@ function Layout() {
                 { label: t("navbar.portfolio"), ref: portfolioRef },
                 { label: t("navbar.certificates"), ref: certificatesRef },
                 { label: t("navbar.contact"), ref: contactRef },
+                { label: t("navbar.gallery"), ref: galleryRef },
               ].map((item, index) => (
                 <button
                   key={index}
@@ -202,6 +204,9 @@ function Layout() {
             <button onClick={() => scrollTo(contactRef)} className="block">
               {t("navbar.contact")}
             </button>
+            <button onClick={() => scrollTo(galleryRef)} className="block">
+              {t("navbar.gallery")}
+            </button>
           </div>
         )}
       </nav>
@@ -212,6 +217,7 @@ function Layout() {
             homeRef,
             aboutRef,
             contactRef,
+            galleryRef,
             certificatesRef,
             servicesRef,
             portfolioRef,

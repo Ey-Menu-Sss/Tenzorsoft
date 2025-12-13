@@ -6,6 +6,7 @@
     "portfolio": "Portfolio",
     "certificates": "Sertifikatlar",
     "contact": "Bog'lanish",
+    "gallery": "Gallereya",
     "readMore": "Batafsil o'qish"
   },
   "hero": {
@@ -129,6 +130,12 @@
       "year": "2024"
     }
   ]
+},
+
+"gellerySection": {
+  "badge": "Gallereya",
+  "title": "Bizning gallereyamiz",
+  "description": "Kampaniyamiz dasturchilarining rasmlari."
 },
 
 

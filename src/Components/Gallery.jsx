@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function GalleryCarousel() {
   const galleryImages = [
@@ -17,11 +18,14 @@ export default function GalleryCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const intervalRef = useRef();
+  const { t } = useTranslation();
 
   const prev = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setCurrentIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + galleryImages.length) % galleryImages.length
+    );
     setTimeout(() => setIsAnimating(false), 700);
   };
 
@@ -59,9 +63,20 @@ export default function GalleryCarousel() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center mt-16">
+    <div className="flex flex-col items-center space-y-4 mb-20">
+      <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px]  h-[50px] md:h-[55px] text-center justify-center items-center">
+        <img src="/logo/phcertificate.png" className="w-[20px]" />
+        <h1 className="text-2xl">{t("gellerySection.badge")}</h1>
+      </button>
+      <h1 className=" font-bold text-[24px] md:text-4xl text-center">
+        {t("gellerySection.title")}
+      </h1>
+      <p className="text-center text-[16px] md:text-xl w-[295px] md:w-[690px] ">
+        {t("gellerySection.description")}
+      </p>
+
       {/* Carousel */}
-      <div className="relative w-full max-w-6xl h-[450px] perspective-1000">
+      <div className="relative w-full max-w-6xl h-[450px] perspective-1000 mt-10">
         <button
           onClick={prev}
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-blue-600 text-white w-10 h-10 rounded-full z-10 hover:bg-blue-700"
@@ -70,13 +85,18 @@ export default function GalleryCarousel() {
         </button>
         <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
           {galleryImages.map((img, i) => {
-            const offset = (i - currentIndex + galleryImages.length) % galleryImages.length;
+            const offset =
+              (i - currentIndex + galleryImages.length) % galleryImages.length;
             let className = "absolute transition-all duration-700";
             if (offset === 0) className += " z-10 scale-110"; // center
-            else if (offset === 1) className += " translate-x-[200px] scale-90 opacity-80";
-            else if (offset === 2) className += " translate-x-[400px] scale-80 opacity-60";
-            else if (offset === galleryImages.length - 1) className += " -translate-x-[200px] scale-90 opacity-80";
-            else if (offset === galleryImages.length - 2) className += " -translate-x-[400px] scale-80 opacity-60";
+            else if (offset === 1)
+              className += " translate-x-[200px] scale-90 opacity-80";
+            else if (offset === 2)
+              className += " translate-x-[400px] scale-80 opacity-60";
+            else if (offset === galleryImages.length - 1)
+              className += " -translate-x-[200px] scale-90 opacity-80";
+            else if (offset === galleryImages.length - 2)
+              className += " -translate-x-[400px] scale-80 opacity-60";
             else className += " opacity-0 pointer-events-none";
 
             return (
@@ -94,7 +114,11 @@ export default function GalleryCarousel() {
                   cursor: "pointer",
                 }}
               >
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover"
+                />
               </div>
             );
           })}
