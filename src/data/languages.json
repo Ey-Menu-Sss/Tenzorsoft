@@ -1,0 +1,5 @@
+[
+    { "code": "uz", "name": "UZ", "label": "UZ", "flag": "/logo/uzbekistan.png" },
+    { "code": "ru", "name": "RU", "label": "RU", "flag": "/logo/russian.png" },
+    { "code": "en", "name": "EN", "label": "EN", "flag": "/logo/america.png" }
+]

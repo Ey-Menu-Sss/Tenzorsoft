@@ -16,7 +16,7 @@
   "aboutSection": {
     "badge": "Biz haqimizda",
     "title": "Biz yuqori malakali va tajribali mutaxassislar jamoasi bo‘lib, innovatsion yechimlar yaratishga intilamiz.",
-    "subtitle": "Tenzor Soft LLC 2008 yildan beri O'zbekistonda IT xizmatlari bozorida faoliyat yuritayotgan yetakchi dasturiy ta'minot ishlab chiqaruvchisidir. 18 yildan ortiq vaqt davomida biz ishonchli raqamli yechimlar yaratib kelmoqdamiz.",
+    "subtitle": "Tenzor Soft 2008 yildan beri O‘zbekistonda IT sohasida yetakchi dasturiy ta’minot ishlab chiqaruvchi sifatida faoliyat yuritib, 18 yildan ortiq tajribasi bilan ishonchli raqamli yechimlar yaratib kelmoqda.",
     "whyTitle": "Nega aynan biz?",
     "whyDescription": "IT sohasidagi 18 yildan ortiq tajribamiz tufayli biz innovatsion yechimlarni izlayotgan bizneslar uchun ishonchli hamkor bo'ldik. Mutaxassislarimizning bilim va qarashlari murakkab vazifalarni ham hal etishga yordam beradi.",
     "features": [
@@ -142,8 +142,8 @@
       "namePlaceholder": "Ism",
       "emailLabel": "Elektron pochta manzili",
       "emailPlaceholder": "example@mail.com",
-      "companyLabel": "Kompaniya",
-      "companyPlaceholder": "Kompaniya nomi",
+      "PhoneNumberLabel": "Telefon raqam",
+      "PhoneNumberPlaceholder": "Telefon raqamingiz",
       "messageLabel": "Xabar",
       "messagePlaceholder": "Loyihangiz haqida bizga yozing"
     },

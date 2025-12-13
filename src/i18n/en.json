@@ -17,7 +17,7 @@
   "aboutSection": {
     "badge": "About Us",
     "title": "We are a team of highly skilled and experienced professionals, dedicated to creating innovative solutions",
-    "subtitle": "Tenzor Soft LLC is a leading software developer in Uzbekistan, operating in the IT services market since 2008. For over 18 years, we have been delivering reliable digital solutions.",
+    "subtitle": "Tenzor Soft has been operating in Uzbekistan since 2008 as a leading IT software developer, creating reliable digital solutions with over 18 years of experience.",
     "whyTitle": "Why Choose Us?",
     "whyDescription": "With over 18 years of experience  in the IT industry, we've established  ourselves as a trusted partner for businesses seeking innovative solutions. Our team of experts brings together diverse skills and perspectives to tackle  even the most complex challenges.",
     "features": [
@@ -142,8 +142,8 @@
       "namePlaceholder": "Name",
       "emailLabel": "Email Address",
       "emailPlaceholder": "example@mail.com",
-      "companyLabel": "Company",
-      "companyPlaceholder": "Company name",
+      "PhoneNumberLabel": "Phone Number",
+      "PhoneNumberPlaceholder": "Phone Number",
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us about your project"
     },

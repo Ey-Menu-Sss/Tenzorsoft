@@ -1,11 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Companents/Layout";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Components/Layout";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import All from './Companents/all';
-import Porfolio from './Companents/Porfolio';
-import AboutUs from './Companents/AboutUs';
-import ScrollToTop from "./Companents/ScrollToTop";
+import All from './Components/all';
+import Porfolio from './Components/Porfolio';
+import AboutUs from './pages/About';
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
