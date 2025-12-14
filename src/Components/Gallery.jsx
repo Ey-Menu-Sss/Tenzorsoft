@@ -97,13 +97,13 @@ export default function GalleryCarousel() {
             if (offset === 0)
               className += " z-20 scale-110";
             else if (offset === 1)
-              className += " translate-x-[220px] scale-90 opacity-80";
+              className += " translate-x-[220px] z-15 scale-90 opacity-90";
             else if (offset === 2)
-              className += " translate-x-[440px] scale-80 opacity-40";
+              className += " translate-x-[440px] z-10 scale-80 opacity-60";
             else if (offset === -1)
-              className += " -translate-x-[220px] scale-90 opacity-80";
+              className += " -translate-x-[220px] z-15 scale-90 opacity-90";
             else if (offset === -2)
-              className += " -translate-x-[440px] scale-80 opacity-40";
+              className += " -translate-x-[440px] z-10 scale-80 opacity-60";
             else
               className += " opacity-0 pointer-events-none";
 
