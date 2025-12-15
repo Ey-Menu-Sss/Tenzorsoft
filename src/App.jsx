@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout";
+import Layout from "./pages/home/Layout";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import All from "./Components/all";
-import Porfolio from "./Components/Porfolio";
+import All from "./pages/home/all";
+import Porfolio from "./pages/_components/Porfolio";
 import AboutUs from "./pages/About";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./pages/_components/ScrollToTop";
 
 function App() {
   return (

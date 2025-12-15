@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../../contexts/ThemeProvider";
 
 function Porfolio() {
   const { t } = useTranslation();
+  const { darkMode } = useTheme();
   return (
     <div className='space-y-[30px] mb-10'>
       <div className=' h-[99px] bg-black/40'>
 
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 max-w-[1440px] mx-auto ">
-        <a href="https://logistx.uz" target="_blank" rel="noopener noreferrer" className="block">
-          <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden  ">
+        <a href="https://logistx.uz" target="_blank" rel="noopener noreferrer" className={`block`}>
+          <div className={`group border border-[#0349A71A] rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden ${darkMode ? 'hover:shadow-xl hover:shadow-gray-300' : ''} ` }>
             <div className="overflow-hidden rounded-xl">
               <img src="/image/LogistX.png" className="w-[591px] sm:w-[681px] md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
             </div>
@@ -27,7 +29,7 @@ function Porfolio() {
           </div>
         </a>
 
-        <a href="https://bepulgps.uz" target="_blank" rel="noopener noreferrer" className="block">
+        <a href="https://bepulgps.uz" target="_blank" rel="noopener noreferrer" className={`block ${darkMode ? 'bg-gray-700' : ''} transition-colors duration-500`}>
           <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden ">
             <div className="overflow-hidden rounded-xl">
               <img src="/image/BepulGPS.png" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />
@@ -42,7 +44,7 @@ function Porfolio() {
           </div>
         </a>
 
-        <a href="https://xmed.uz/" target="_blank" rel="noopener noreferrer" className="block">
+        <a href="https://xmed.uz/" target="_blank" rel="noopener noreferrer" className={`block ${darkMode ? 'bg-gray-700' : ''} transition-colors duration-500`}>
           <div className="group border border-[#0349A71A] hover:shadow-xl hover:shadow-gray-300 rounded-2xl p-4 bg-white space-y-[20px] overflow-hidden hidden lg:block">
             <div className="overflow-hidden rounded-xl">
               <img src="/image/Xmed.png" className="w-[591px] sm:w-[681px]  md:w-[695px] h-[200px] sm:h-[295px] md:h-[364px] rounded-xl transition-transform duration-500 group-hover:scale-110" />

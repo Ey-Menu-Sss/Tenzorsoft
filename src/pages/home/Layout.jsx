@@ -1,9 +1,12 @@
 import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "../_components/LanguageSelector";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../../contexts/ThemeProvider";
+import CompanyInfo from "../_components/CompanyInfo";
 
 const BOT_TOKEN = "8565375529:AAGecSewxKBWrMBUYWwxEukIEuCch7Px5fw";
 const CHAT_ID = "-1003257673634";
@@ -13,8 +16,10 @@ function Layout() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  
+  const [fileName, setFileName] = useState("");
+
   const { t } = useTranslation();
+  const { darkMode, toggleTheme } = useTheme();
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -82,7 +87,7 @@ function Layout() {
       e.target.reset();
     } catch (error) {
       console.error("Xatolik:", error);
-      alert("❌ Xabar yuborishda xatolik yuz berdi!");
+      alert("Xabar yuborishda xatolik yuz berdi!");
     }
   };
 
@@ -97,6 +102,13 @@ function Layout() {
   const scrollTo = (ref) => {
     setOpen(false);
     ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileName(file.name);
+    }
   };
   // footer
   const faqs = [
@@ -123,14 +135,6 @@ function Layout() {
         { text: t("faq.item2.itservices"), link: "/dashboard" },
       ],
     },
-    // {
-    //     question: t("faq.item3.question"),
-    //     answers: [
-    //         { text: t("faq.item3.address") },
-    //         { text: t("faq.item3.phone") },
-    //         { text: t("faq.item3.email") },
-    //     ]
-    // }
   ];
 
   return (
@@ -172,6 +176,35 @@ function Layout() {
 
             <div className="flex gap-6 items-center">
               <LanguageSelector />
+              {/* Dark / Light Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="relative w-11 h-11 rounded-full flex items-center justify-center
+                 bg-black/10 dark:bg-white/10 cursor-pointer
+                 hover:scale-110 transition-all duration-300
+                 overflow-hidden"
+              >
+                {/* Sun */}
+                <Sun
+                  className={`absolute w-5 h-5 text-yellow-400 transition-all duration-500
+                  ${
+                    // show sun when NOT in dark mode
+                    darkMode
+                      ? "scale-0 rotate-90 opacity-0"
+                      : "scale-100 rotate-0 opacity-100"
+                  }`}
+                />
+                {/* Moon */}
+                <Moon
+                  className={`absolute w-5 h-5 text-blue-300 transition-all duration-500
+                  ${
+                    // show moon when in dark mode
+                    darkMode
+                      ? "scale-100 rotate-0 opacity-100"
+                      : "scale-0 -rotate-90 opacity-0"
+                  }`}
+                />
+              </button>
               <div className=" lg:hidden flex gap-[30px] justify-center items-center ">
                 <button
                   className="text-white text-[24px]  "
@@ -229,7 +262,9 @@ function Layout() {
       <section
         ref={contactRef}
         id="Contact"
-        className="bg-[#F2F2F2] h-full flex flex-col justify-center items-center"
+        className={`flex flex-col justify-center items-center ${
+          darkMode ? "bg-gray-800 text-white" : "bg-[#F2F2F2]"
+        } transition-colors duration-500`}
       >
         <div className="max-w-[1200px] mx-auto flex flex-col gap-6 xl:flex-row items-start justify-start md:justify-between md:w-full py-8 px-[4px] space-y-[20px] xl:space-y-0">
           <div className="w-full flex flex-col justify-between mt-2 gap-6 p-4">
@@ -246,45 +281,12 @@ function Layout() {
               </p>
             </div>
 
-            <div className="space-y-6 flex flex-col items-start justify-start mt-4">
-              <div
-                className="bg-white w-full rounded-[24px] flex justify-start items-center px-4"
-                onClick={() => {
-                  window.open(
-                    "https://www.google.com/maps/search/Tashkent+city+Mirabad+district+st.+Sarbon+32A/@41.3260143,69.254832,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
-                    "_blank"
-                  );
-                }}
-              >
-                <img src="/logo/location.svg" className="w-[32px]" />
-                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[20px] p-4 cursor-pointer">
-                  Tashkent city Mirabad district st. Sarbon 32A{" "}
-                </p>
-              </div>
-              <div
-                className="bg-white w-full rounded-[24px] flex justify-start items-center px-4"
-                onClick={() => (window.location.href = "tel:+998954601010")}
-              >
-                <img src="/logo/phone.svg" className="w-[32px]" />
-                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[20px] p-4 cursor-pointer">
-                  +998 95 460 10 10
-                </p>
-              </div>
-              <div
-                className="bg-white w-full rounded-[24px] flex justify-start items-center px-4"
-                onClick={() => (window.location.href = "tenzorsoft@gmail.com")}
-              >
-                <img src="/logo/email.svg" className="w-[32px]" />
-                <p className="text-[#8D8D8D] font-medium text-[16px] md:text-[20px] p-4 cursor-pointer">
-                  tenzorsoft.com
-                </p>
-              </div>
-            </div>
+            <CompanyInfo />
           </div>
 
-          <form
+          {/* <form
             onSubmit={handleSubmit}
-            className="w-full md:rounded-3xl p-[15px] md:p-[36px] shadow-2xl shadow-gray-200 bg-white space-y-6"
+            className={`w-full max-w-xl space-y-4 rounded-3xl p-6 shadow-xl py-8 text-black ${darkMode ? 'bg-gray-300' : 'bg-white'}`}
           >
             <div className="flex flex-col justify-between gap-3 sm:flex-row">
               <div className=" w-full">
@@ -326,14 +328,9 @@ function Layout() {
                focus-within:ring-2 focus-within:ring-blue-500
                overflow-hidden"
               >
-                {/* Country code */}
-                <span
-                  className="flex items-center pl-4 pr-1 select-none"
-                >
+                <span className="flex items-center pl-4 pr-1 select-none">
                   +998
                 </span>
-
-                {/* Phone input */}
                 <input
                   type="tel"
                   id="phoneNumber"
@@ -371,6 +368,50 @@ function Layout() {
               type="submit"
               className="w-full h-[50px] bg-[#006DFF] border-2 border-[#006DFF] hover:text-[#006DFF] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors"
             >
+              {t("contactSection.submit")}
+            </button>
+          </form> */}
+          <form
+            onSubmit={handleSubmit}
+            className={`w-full max-w-xl space-y-4 rounded-3xl p-6 shadow-xl py-8 text-black ${
+              darkMode ? "bg-gray-300" : "bg-white"
+            }`}
+          >
+            <div className="flex flex-col md:flex-row gap-4 w-full">
+              <Input
+                label={t("contactSection.form.nameLabel")}
+                name="name"
+                placeholder={t("contactSection.form.namePlaceholder")}
+              />
+              <Input
+                label={t("contactSection.form.emailLabel")}
+                name="email"
+                placeholder={t("contactSection.form.emailPlaceholder")}
+              />
+            </div>
+            <Input
+              label={t("contactSection.form.companyLabel")}
+              name="company"
+              placeholder={t("contactSection.form.companyPlaceholder")}
+            />
+            <Textarea
+              label={t("contactSection.form.messageLabel")}
+              name="message"
+              placeholder={t("contactSection.form.messagePlaceholder")}
+            />
+
+            <label className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 text-gray-500">
+              {/* <img src="/logo/upload.png" className="h-5 w-5" /> */}
+              <span className="truncate">{fileName || "Выбрать файл"}</span>
+              <input
+                type="file"
+                name="file"
+                className="hidden"
+                onChange={handleFileChange}
+              />
+            </label>
+
+            <button className="w-full h-[50px] bg-[#006DFF] border-2 border-[#006DFF] hover:text-[#006DFF] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors">
               {t("contactSection.submit")}
             </button>
           </form>
@@ -577,3 +618,41 @@ function Layout() {
 }
 
 export default Layout;
+
+// eslint-disable-next-line react/prop-types
+function Input({ label, name, placeholder }) {
+  const isHalf = ["name", "email"].includes(name);
+  const { darkMode } = useTheme();
+  return (
+    <div className={isHalf ? "flex-1" : "w-full"}>
+      <label className="mb-2 block text-lg">{label}</label>
+      <input
+        name={name}
+        required
+        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+          darkMode ? "border-gray-400" : "border-gray-300"
+        }`}
+        placeholder={placeholder}
+      />
+    </div>
+  );
+}
+
+// eslint-disable-next-line react/prop-types
+function Textarea({ label, name, placeholder }) {
+  const { darkMode } = useTheme();
+  return (
+    <div>
+      <label className="mb-2 block text-lg">{label}</label>
+      <textarea
+        name={name}
+        rows={4}
+        required
+        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+          darkMode ? "border-gray-400" : "border-gray-300"
+        }`}
+        placeholder={placeholder}
+      />
+    </div>
+  );
+}

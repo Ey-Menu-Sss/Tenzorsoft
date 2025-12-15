@@ -1,68 +1,19 @@
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
-import Partners from "./Partners";
-// import { useNavigate } from "react-router-dom";
-import Carousel from "./Carousel";
-import Gallery from "./Gallery";
+import Partners from "../_components/Partners";
+import Carousel from "../_components/Carousel";
+import Gallery from "../_components/Gallery";
+import ServicesCards from "../_components/ServicesCards";
+import { useTheme } from "../../contexts/ThemeProvider";
 
 function All() {
   const { t } = useTranslation();
-  const cardsData = [
-    {
-      title: "Карточка 1",
-      icon: "/logo/Group.png",
-      description: t("servicesSection.cards.0.title"),
-      cardText: t("servicesSection.cards.0.body"),
-    },
-    {
-      title: "Карточка 2",
-      icon: "/logo/hugeicons.png",
-      description: t("servicesSection.cards.1.title"),
-      cardText: t("servicesSection.cards.1.body"),
-    },
-    {
-      title: "Карточка 3",
-      icon: "/logo/material-symbols_computer-outline-rounded.png",
-      description: t("servicesSection.cards.2.title"),
-      cardText: t("servicesSection.cards.2.body"),
-    },
-    {
-      title: "Карточка 4",
-      icon: "/logo/file-c.png",
-      description: t("servicesSection.cards.3.title"),
-      cardText: t("servicesSection.cards.3.body"),
-    },
-    {
-      title: "Карточка 5",
-      icon: "/logo/system-code.png",
-      description: t("servicesSection.cards.4.title"),
-      cardText: t("servicesSection.cards.4.body"),
-    },
-    {
-      title: "Карточка 6",
-      icon: "/logo/outline.png",
-      description: t("servicesSection.cards.5.title"),
-      cardText: t("servicesSection.cards.5.body"),
-    },
-    {
-      title: "Карточка 7",
-      icon: "/logo/tabler.png",
-      description: t("servicesSection.cards.6.title"),
-      cardText: t("servicesSection.cards.6.body"),
-    },
-    {
-      title: "Карточка 8",
-      icon: "/logo/monitor-mobile.png",
-      description: t("servicesSection.cards.7.title"),
-      cardText: t("servicesSection.cards.7.body"),
-    },
-  ];
-
   const { homeRef, aboutRef, certificatesRef, servicesRef, portfolioRef, galleryRef } =
     useOutletContext();
+    
+  const { darkMode } = useTheme();
+  
 
   return (
     <div>
@@ -109,15 +60,15 @@ function All() {
         </section>
       </header>
 
-      <main className=" ">
-        <section id="partners" className="  my-12">
+      <main className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white'} transition-colors duration-500`}>
+        <section id="partners" className={`py-12 ${darkMode ? 'bg-gray-700' : ''} transition-colors duration-500`}>
           <Partners />
         </section>
 
         <section
           ref={aboutRef}
           id="AboutUs"
-          className=" bg-gradient-to-b from-[#0348A408] to-white flex"
+          className={`flex `}
         >
           <div className="max-w-[1200px]  mx-auto space-y-[40px] md:space-y-[120px] my-[80px] px-[20px] md:px-2 lg:px-3 2xl:px-0">
             <div className="space-y-4 items-center justify-center flex flex-col text-center">
@@ -132,9 +83,6 @@ function All() {
               <p className="text-xl w-[335px] md:w-[600px] lg:w-[800px]">
                 {t("aboutSection.subtitle")}
               </p>
-              {/* <Link to="/aboutus" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
-                            {t("portfolioSection.cta")}
-                        </Link> */}
             </div>
 
             <div className="flex flex-col xl:flex-row items-center justify-center gap-[49px]">
@@ -241,10 +189,11 @@ function All() {
           </div>
         </section>
 
+        {/* Services */}
         <section
           ref={servicesRef}
           id="Services"
-          className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-[70px] my-[20px] "
+          className={`w-full mx-auto flex flex-col items-center justify-center space-y-[70px] py-6`}
         >
           <div className="space-y-4 items-center justify-center flex flex-col text-center">
             <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
@@ -255,37 +204,13 @@ function All() {
               {t("servicesSection.description")}{" "}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 2xl:grid-cols-4 gap-4">
-            {cardsData.map((card, index) => (
-              <div
-                key={index}
-                className="relative flex flex-col h-[175px] w-[345px] md:h-[285px] p-[16px] md:p-6 rounded-2xl border border-white shadow-xl shadow-gray-200   space-y-1 hover:bg-[#F3F8FF]"
-              >
-                <div className="flex gap-4 items-center">
-                  <span className="flex items-center shrink-0 justify-center w-[60px] h-[60px] rounded-full bg-[#006DFF]">
-                    <img src={card.icon} className="w-[34px]" />
-                  </span>
-                  <div className=" font-semibold text-[20px]  text-[#1B2845] block lg:hidden">
-                    {card.description}
-                  </div>
-                </div>
-                <h1 className="mt-2 font-semibold text-2xl text-[#1B2845] hidden lg:block">
-                  {card.description}
-                </h1>
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/90 to-transparent"></div>
-                <p className=" text-[16px] md:text-lg  text-[#8D8D8D]">
-                  {" "}
-                  {card.cardText}{" "}
-                </p>
-              </div>
-            ))}
-          </div>
+          <ServicesCards/>
         </section>
 
         <section
           ref={portfolioRef}
           id="Porfolio"
-          className=" bg-gradient-to-b from-[#0348A408] to-white  mt-[66px] flex items-center"
+          className={`pt-16 flex items-center ${darkMode ? 'bg-gray-800 text-white' : 'bg-white'} transition-colors duration-500`}
         >
           <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[20px] md:my-[70px] space-y-2 md:space-y-4 px-[20px] md:px-2 lg:px-3 2xl:px-0">
             <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
@@ -406,7 +331,6 @@ function All() {
         </section>
 
         <section id="gallery" className="mt-20" ref={galleryRef}>
-          
           <Gallery />
         </section>
       </main>

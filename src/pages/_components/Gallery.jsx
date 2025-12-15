@@ -64,7 +64,7 @@ export default function GalleryCarousel() {
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col items-center space-y-4 mb-20">
+    <div className="flex flex-col items-center space-y-4 pb-20">
       <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[202px] h-[50px] items-center justify-center">
         <img src="/logo/phcertificate.png" className="w-[20px]" />
         <h1 className="text-2xl">{t("gellerySection.badge")}</h1>
@@ -99,7 +99,7 @@ export default function GalleryCarousel() {
             else if (offset === 1)
               className += " translate-x-[220px] z-15 scale-90 opacity-90";
             else if (offset === 2)
-              className += " translate-x-[440px] z-10 scale-80 opacity-60";
+              className += " translate-x-[440px] z-10 scale-80 opacity-60"; 
             else if (offset === -1)
               className += " -translate-x-[220px] z-15 scale-90 opacity-90";
             else if (offset === -2)
