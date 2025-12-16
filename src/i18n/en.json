@@ -150,6 +150,8 @@
       "namePlaceholder": "Name",
       "emailLabel": "Email Address",
       "emailPlaceholder": "example@mail.com",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Company name",
       "PhoneNumberLabel": "Phone Number",
       "PhoneNumberPlaceholder": "Phone Number",
       "messageLabel": "Message",

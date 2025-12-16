@@ -145,6 +145,8 @@
       "namePlaceholder": "Имя",
       "emailLabel": "Адрес электронной почты",
       "emailPlaceholder": "example@mail.com",
+      "companyLabel": "Компания",
+      "companyPlaceholder": "Имя компании",
       "PhoneNumberLabel": "Телефон номер",
       "PhoneNumberPlaceholder": "Ваш Телефон номер",
       "messageLabel": "Сообщение",
